@@ -7,12 +7,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .white
     // Do any additional setup after loading the view.
+  }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.isNavigationBarHidden = true
+    tabBarController?.tabBar.isHidden = true
   }
 
 

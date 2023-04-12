@@ -18,9 +18,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     window = UIWindow(frame: windowScene.coordinateSpace.bounds)
     window?.windowScene = windowScene
-    window?.rootViewController = ViewController()
+    window?.rootViewController = createTabbar()
     window?.makeKeyAndVisible()
 
+  }
+
+  func createSearchNavigationController() -> UINavigationController {
+    let seachVC = MainViewController()
+    seachVC.title = "Search"
+    seachVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+
+    return UINavigationController(rootViewController: seachVC)
+  }
+
+
+  func createTabbar() -> UITabBarController {
+    let tabBar = UITabBarController()
+    UITabBar.appearance().tintColor = .systemGreen
+    tabBar.viewControllers = [createSearchNavigationController()]
+
+    return tabBar
   }
 
   func sceneDidDisconnect(_ scene: UIScene) {
