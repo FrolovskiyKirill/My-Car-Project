@@ -7,14 +7,14 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
 
-  let callToActionButton = MCButton(backgroundColor: .systemGray2, systemName: "fuelpump")
+  let buttonBlockView = ButtonBlockView()
 
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .white
-    configureCallToActionButton()
+    configureButtonBlockView()
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -23,27 +23,16 @@ class MainViewController: UIViewController {
     tabBarController?.tabBar.isHidden = true
   }
 
-  private func configureCallToActionButton() {
+  private func configureButtonBlockView() {
+    view.addSubview(buttonBlockView)
 
-    view.addSubview(callToActionButton)
-
-    //Этот код настраивает действие, которое будет выполнено, когда пользователь нажимает кнопку callToActionButton.
-    callToActionButton.addTarget(self, action: #selector(alertVC), for: .touchUpInside)
-
+    // Настройка constraints для customStackView
+    buttonBlockView.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
-      callToActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -40),
-//      callToActionButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
-//      callToActionButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
-      callToActionButton.heightAnchor.constraint(equalToConstant: 80),
-      callToActionButton.widthAnchor.constraint(equalToConstant: 80)
+      buttonBlockView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+      buttonBlockView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+      buttonBlockView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -15)
     ])
   }
-
-  @objc func alertVC() {
-    print("hello")
-
-  }
-
-
 }
 

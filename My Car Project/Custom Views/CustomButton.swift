@@ -8,10 +8,10 @@
 import UIKit
 
 /// ```
-/// Данный класс MCButton предоставляет кастомную кнопку с настройками
+/// Данный класс создает кастомную кнопку с настройками
 /// по умолчанию, которые можно изменить через конструктор.
 /// ```
-class MCButton: UIButton {
+final class CustomButton: UIButton {
 
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -36,6 +36,7 @@ class MCButton: UIButton {
   private func configure() {
     layer.cornerRadius = 20
     translatesAutoresizingMaskIntoConstraints = false
+    widthAnchor.constraint(greaterThanOrEqualToConstant: 75).isActive = true
+    heightAnchor.constraint(greaterThanOrEqualToConstant: 75).isActive = true
   }
-
 }
