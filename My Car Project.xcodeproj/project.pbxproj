@@ -13,8 +13,6 @@
 		ED49FB4429E71E38002FB9E6 /* My_Car_Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED49FB4229E71E38002FB9E6 /* My_Car_Project.xcdatamodeld */; };
 		ED49FB4629E71E3A002FB9E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED49FB4529E71E3A002FB9E6 /* Assets.xcassets */; };
 		ED49FB4929E71E3A002FB9E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED49FB4729E71E3A002FB9E6 /* LaunchScreen.storyboard */; };
-		ED49FB5229E721F5002FB9E6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = ED49FB5029E721F5002FB9E6 /* .gitignore */; };
-		ED49FB5329E721F5002FB9E6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = ED49FB5129E721F5002FB9E6 /* README.md */; };
 		ED49FB5829E72BDB002FB9E6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED49FB5729E72BDB002FB9E6 /* CustomButton.swift */; };
 		ED49FB5A29E856A2002FB9E6 /* ButtonBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED49FB5929E856A2002FB9E6 /* ButtonBlockView.swift */; };
 /* End PBXBuildFile section */
@@ -28,8 +26,6 @@
 		ED49FB4529E71E3A002FB9E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED49FB4829E71E3A002FB9E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED49FB4A29E71E3A002FB9E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ED49FB5029E721F5002FB9E6 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		ED49FB5129E721F5002FB9E6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		ED49FB5729E72BDB002FB9E6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		ED49FB5929E856A2002FB9E6 /* ButtonBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBlockView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,8 +93,6 @@
 				ED49FB3B29E71E38002FB9E6 /* SceneDelegate.swift */,
 				ED49FB4529E71E3A002FB9E6 /* Assets.xcassets */,
 				ED49FB4729E71E3A002FB9E6 /* LaunchScreen.storyboard */,
-				ED49FB5129E721F5002FB9E6 /* README.md */,
-				ED49FB5029E721F5002FB9E6 /* .gitignore */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -162,8 +156,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED49FB4929E71E3A002FB9E6 /* LaunchScreen.storyboard in Resources */,
-				ED49FB5229E721F5002FB9E6 /* .gitignore in Resources */,
-				ED49FB5329E721F5002FB9E6 /* README.md in Resources */,
 				ED49FB4629E71E3A002FB9E6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
