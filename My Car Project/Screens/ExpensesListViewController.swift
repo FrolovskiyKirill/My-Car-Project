@@ -42,19 +42,19 @@ class ExpensesListViewController: UITableViewController {
       title: "Add",
       style: .plain,
       target: self,
-      action: #selector(addNewTask)
+      action: #selector(addNewExpense)
     )
   }
 
-  @objc private func addNewTask() {
+  @objc private func addNewExpense() {
     showAlert()
   }
 
   private func save(expeseName: String) {
-    StorageManager.shared.create(expeseName) { task in
-      self.extenses.title.append(task)
+    StorageManager.shared.create(expeseName) { expense in
+      self.extenses.title.insert(expense, at: 0)
       self.tableView.insertRows(
-        at: [IndexPath(row: self.extenses.title.count - 1, section: 0)],
+        at: [IndexPath(row: 0, section: 0)],
         with: .automatic
       )
     }
@@ -64,7 +64,8 @@ class ExpensesListViewController: UITableViewController {
     StorageManager.shared.fetchData { result in
       switch result {
       case .success(let extenses):
-        self.extenses.title = extenses
+        self.extenses.title = extenses.reversed()
+        self.tableView.reloadData()
       case .failure(let error):
         print(error.localizedDescription)
       }
