@@ -15,6 +15,10 @@
 		ED49FB4929E71E3A002FB9E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED49FB4729E71E3A002FB9E6 /* LaunchScreen.storyboard */; };
 		ED49FB5829E72BDB002FB9E6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED49FB5729E72BDB002FB9E6 /* CustomButton.swift */; };
 		ED49FB5A29E856A2002FB9E6 /* ButtonBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED49FB5929E856A2002FB9E6 /* ButtonBlockView.swift */; };
+		ED6CA92C29ED588B001CA06C /* ExpensesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6CA92B29ED588B001CA06C /* ExpensesListViewController.swift */; };
+		ED6CA92F29ED6768001CA06C /* ExpensesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6CA92E29ED6768001CA06C /* ExpensesModel.swift */; };
+		ED6CA93229ED6AEB001CA06C /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6CA93129ED6AEB001CA06C /* StorageManager.swift */; };
+		ED6CA93529ED7967001CA06C /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6CA93429ED7967001CA06C /* AlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		ED49FB4A29E71E3A002FB9E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED49FB5729E72BDB002FB9E6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		ED49FB5929E856A2002FB9E6 /* ButtonBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBlockView.swift; sourceTree = "<group>"; };
+		ED6CA92B29ED588B001CA06C /* ExpensesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesListViewController.swift; sourceTree = "<group>"; };
+		ED6CA92E29ED6768001CA06C /* ExpensesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesModel.swift; sourceTree = "<group>"; };
+		ED6CA93129ED6AEB001CA06C /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		ED6CA93429ED7967001CA06C /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +68,11 @@
 		ED49FB3829E71E38002FB9E6 /* My Car Project */ = {
 			isa = PBXGroup;
 			children = (
+				ED6CA92D29ED61B0001CA06C /* Model */,
+				ED6CA93029ED6ABC001CA06C /* Servises */,
 				ED49FB5529E72B43002FB9E6 /* Screens */,
 				ED49FB5429E72B2A002FB9E6 /* Custom Views */,
+				ED6CA93329ED7928001CA06C /* Extensions */,
 				ED49FB5629E72B78002FB9E6 /* Support */,
 				ED49FB4A29E71E3A002FB9E6 /* Info.plist */,
 				ED49FB4229E71E38002FB9E6 /* My_Car_Project.xcdatamodeld */,
@@ -82,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				ED49FB3D29E71E38002FB9E6 /* MainViewController.swift */,
+				ED6CA92B29ED588B001CA06C /* ExpensesListViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -95,6 +107,30 @@
 				ED49FB4729E71E3A002FB9E6 /* LaunchScreen.storyboard */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		ED6CA92D29ED61B0001CA06C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED6CA92E29ED6768001CA06C /* ExpensesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ED6CA93029ED6ABC001CA06C /* Servises */ = {
+			isa = PBXGroup;
+			children = (
+				ED6CA93129ED6AEB001CA06C /* StorageManager.swift */,
+			);
+			path = Servises;
+			sourceTree = "<group>";
+		};
+		ED6CA93329ED7928001CA06C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ED6CA93429ED7967001CA06C /* AlertController.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,9 +206,13 @@
 				ED49FB5A29E856A2002FB9E6 /* ButtonBlockView.swift in Sources */,
 				ED49FB5829E72BDB002FB9E6 /* CustomButton.swift in Sources */,
 				ED49FB4429E71E38002FB9E6 /* My_Car_Project.xcdatamodeld in Sources */,
+				ED6CA93229ED6AEB001CA06C /* StorageManager.swift in Sources */,
 				ED49FB3E29E71E38002FB9E6 /* MainViewController.swift in Sources */,
 				ED49FB3A29E71E38002FB9E6 /* AppDelegate.swift in Sources */,
+				ED6CA93529ED7967001CA06C /* AlertController.swift in Sources */,
+				ED6CA92C29ED588B001CA06C /* ExpensesListViewController.swift in Sources */,
 				ED49FB3C29E71E38002FB9E6 /* SceneDelegate.swift in Sources */,
+				ED6CA92F29ED6768001CA06C /* ExpensesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
