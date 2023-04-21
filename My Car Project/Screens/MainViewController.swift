@@ -15,12 +15,21 @@ final class MainViewController: UIViewController {
     super.viewDidLoad()
     view.backgroundColor = .white
     configureButtonBlockView()
+    setupNavigationBar()
   }
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    navigationController?.isNavigationBarHidden = true
-    tabBarController?.tabBar.isHidden = true
+    navigationController?.navigationBar.prefersLargeTitles = false
+  }
+
+  private func setupNavigationBar() {
+    navigationItem.rightBarButtonItem = UIBarButtonItem(
+      title: "Expenses",
+      style: .plain,
+      target: self,
+      action: #selector(pushExpensesListViewController)
+    )
   }
 
   private func configureButtonBlockView() {
@@ -33,6 +42,11 @@ final class MainViewController: UIViewController {
       buttonBlockView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
       buttonBlockView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -15)
     ])
+  }
+
+  @objc private func pushExpensesListViewController() {
+    let expensesListViewController = ExpensesListViewController()
+    navigationController?.pushViewController(expensesListViewController, animated: true)
   }
 }
 
